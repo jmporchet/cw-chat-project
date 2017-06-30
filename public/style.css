@@ -1,0 +1,47 @@
+
+body {
+  align-items: center;
+}
+
+.main {
+  display: block;
+  border: 2px solid black;
+  width: 400px;
+  height: 600px;
+  padding: 30px;
+  background-color: #68b3af;
+}
+
+.box {
+  padding: 16px;
+  border-radius: 16px;
+}
+
+.message-input {
+  bottom: 0;
+  height: 100px;
+}
+
+#message-container {
+  background-color: #aaccb1;
+  height: 80%;
+  width: 80%;
+  overflow: scroll;
+}
+
+.msg-left {
+  float: left;
+}
+
+.msg-right {
+  position: relative;
+  float: right;
+}
+
+.msg {
+  display: block;
+  flex-direction: column;
+  background-color: #d3e2b6;
+  width: 65%;
+  margin: 20px;
+}
