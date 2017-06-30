@@ -1,0 +1,50 @@
+{
+  "name": "chat-client-redux",
+  "version": "1.0.0",
+  "description": "Chat Client Redux",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "awesome",
+    "material",
+    "mongo",
+    "koa"
+  ],
+  "author": "JM - Don",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "koa": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.2.1",
+    "mongoose": "^4.11.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-changelog"
+    },
+    "ghooks": {
+      "pre-commit": "gulp lint"
+    }
+  },
+  "devDependencies": {
+    "css-skeleton": "^1.0.1",
+    "cz-changelog": "^1.0.1",
+    "del": "^2.2.2",
+    "eslint": "^3.5.0",
+    "eslint-plugin-json": "^1.2.0",
+    "ghooks": "^1.3.2",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-html-lint": "0.0.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-replace": "^0.5.4",
+    "gulp-stylelint": "^3.9.0",
+    "materialize": "^1.0.0",
+    "postcss": "^6.0.4",
+    "postcss-cssnext": "^2.11.0",
+    "stylelint-config-standard": "^13.0.0"
+  }
+}
