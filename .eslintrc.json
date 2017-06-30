@@ -12,7 +12,8 @@
     "ecmaVersion": 8
   },
   "plugins": [
-    "json"
+    "json",
+    "html"
   ],
   "rules": {
     "indent": [
