@@ -10,6 +10,7 @@ function addDefSrcIgnore (srcArr) {
   return srcArr.concat([
     '!**/REMOVE{,/**}',
     '!node_modules{,/**}',
+    '!public/scripts{,/**}',
     '!client/bower_components{,/**}',
     '!private{,/**}',
     '!dist{,/**}',
@@ -19,7 +20,7 @@ function addDefSrcIgnore (srcArr) {
 }
 
 // Lint all files
-gulp.task('lint', ['lint-js', 'lint-html', 'lint-css']);
+gulp.task('lint', ['lint-js']); // , 'lint-css']);
 
 // JavaScript and JSON linter
 gulp.task('lint-js', function () {
