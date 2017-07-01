@@ -10,7 +10,8 @@ function addDefSrcIgnore (srcArr) {
   return srcArr.concat([
     '!**/REMOVE{,/**}',
     '!node_modules{,/**}',
-    '!public/scripts{,/**}',
+    '!public/public/scripts{,/**}',
+    '!public/js/**',
     '!client/bower_components{,/**}',
     '!private{,/**}',
     '!dist{,/**}',
