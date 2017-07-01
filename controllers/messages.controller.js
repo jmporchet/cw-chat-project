@@ -1,6 +1,6 @@
 'use strict';
 
-const Message = require('../models/message');
+const Message = require('../models/message.js');
 const Console = console;
 
 const getMessages = async (ctx) => {

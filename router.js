@@ -1,5 +1,5 @@
 const Router = require('koa-router');
-const messagesController = require('./controllers/messages.controller');
+const messagesController = require('./controllers/messages.controller.js');
 
 const router = new Router();
 
@@ -9,6 +9,5 @@ router
   .post('/messages', messagesController.createMessage)
   .put('/messages/:id', messagesController.updateMessage)
   .delete('/messages/:id', messagesController.deleteMessage);
-
 
 module.exports = router;
