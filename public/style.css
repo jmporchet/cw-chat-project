@@ -23,25 +23,45 @@ body {
 }
 
 #message-container {
-  background-color: #aaccb1;
-  height: 80%;
-  width: 80%;
+  background-color: #474A2C;
+  height: 100%;
+  width: 100%;
   overflow: scroll;
 }
-
-.msg-left {
-  float: left;
+#form-section {
+  width: 100%;
+  bottom: 20px;
 }
 
-.msg-right {
-  position: relative;
+#submit {
+  background-color: #7f9183;
+}
+
+.msg-author {
+  font-size: 0.8em;
+}
+.someone-else {
+  float: left;
+  border-top-left-radius: 0px;
+  background-color: #ecf39e;
+}
+
+.me {
   float: right;
+  border-bottom-right-radius: 0px;
+  background-color: #b4e7ce;
 }
 
 .msg {
-  display: block;
+  display: inline;
   flex-direction: column;
-  background-color: #d3e2b6;
   width: 65%;
   margin: 20px;
+}
+.time {
+  display: inline;
+  float: right;
+  text-align: right;
+  color: #424242;
+  font-size: 0.6em;
 }
