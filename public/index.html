@@ -2,24 +2,37 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Chat App</title>
-  <script src="https://code.jquery.com/jquery-3.2.1.js"
-  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-  crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="./css/materialize.min.css" media="screen,projection">
   <link rel="stylesheet" type="text/css" href="./style.css">
-  <script src="./index.js"></script>
-  <script src="./scripts/moment/moment.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
 </head>
 <body>
-  <div class="main box">
-    <div id="message-container" class="box"></div>
-    <div class="message-input">
-      <form id="message-form">
-        <input type="text" name="username" placeholder="Enter your name">
-        <input type="text" name="content" placeholder="Type message here">
-        <button type="submit" name="submit">submit</button>
-      </form>
+  <div class="box container">
+    <div class="row">
+
+      <div id="message-container" class="box col s12 m12 l12"></div>
     </div>
+    <div class="row">
+      <div id="form-section">
+        <div class="input-field col s10">
+          <input placeholder="Enter text" id="content" type="text" class="validate">
+        </div>
+        <button class="btn waves-effect waves-light col s2" type="button" name="submit" id="submit">Submit
+          <i class="material-icons right">send</i>
+       </button>
+     </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="./public/scripts/moment/moment.js"></script>
   </div>
 </body>
 </html>
