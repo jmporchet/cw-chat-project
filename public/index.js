@@ -18,7 +18,7 @@ class Message {
     $msgAuthor.addClass('msg-author');
     let $msgTs =  $('<div></div>');
     $msgTs.text(moment(this.timestamp).format('LT'));
-    $msgTs.addClass('msg-ts');
+    $msgTs.addClass('time');
     $msgInfo.append($msgAuthor, $msgTs);
     $msgDiv.append($msgInfo);
     return $msgDiv;
@@ -31,13 +31,13 @@ class Chat {
     this.messages = [];
   }
 
-  sendMessage (message,author = 'You') {
+  sendMessage (message, author = 'You') {
     const msg = new Message(author,message,Date.now());
     $('#message-container').append(msg.buildDiv().attr('id', 'msg-' + this.messages.length));
     if (author === 'You') {
-      $('#message-container').addClass('msg-right');
+      $('#msg-' + this.messages.length).addClass('me');
     } else {
-      $('#message-container').addClass('msg-left');
+      $('#msg-' + this.messages.length).addClass('someone-else');
     }
     var elem = document.getElementById('data');
     $('#message-container').animate({ scrollTop: $('#message-container').prop('scrollHeight')}, 1000);
@@ -54,14 +54,12 @@ $(document).ready(function () {
   chat = new Chat();
   chat.sendMessage('sup Don');
 
-  $('#message-form').submit(function (e) {
-    // alert(e);
-    const postData = $(this).serializeArray();
-    const urlForm = 'message';
-    // console.log(JSON.stringify(postData));
+  $('#submit').click(function (e) {
+    let content = $('#content').val();
+    //   // console.log(JSON.stringify(postData));
     e.preventDefault();
-    $.post(urlForm, postData);
-    chat.sendMessage(postData[1].value, postData[0].value);
+    //   $.post(urlForm, postData);
+    chat.sendMessage(content);
   });
 
   // setInterval( function () {
