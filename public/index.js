@@ -58,20 +58,21 @@ $(document).ready(function () {
     let content = $('#content').val();
     //   // console.log(JSON.stringify(postData));
     e.preventDefault();
-    //   $.post(urlForm, postData);
+    $.post('http://localhost:3000/messages', {'content': content, 'author': 'Me'});
     chat.sendMessage(content);
   });
 
-  // setInterval( function () {
-  //   try {
-  //     $.ajax('http://quotes.stormconsultancy.co.uk/random.json', {
-  //       success: function (data) {
-  //         chat.sendMessage(data.author,data.quote);
-  //       },
-  //       dataType: 'jsonp'
-  //     });
-  //   } catch (e) {
-  //     // console.log('Oops:',e);
-  //   }
-  // }, Math.random() * (15000 - 5000) + 5000);
+  setInterval( function () {
+    try {
+      $.ajax('http://quotes.stormconsultancy.co.uk/random.json', {
+        success: function (data) {
+          $.post('http://localhost:3000/messages', {'content': data.quote, 'author': data.author});
+          chat.sendMessage(data.author,data.quote);
+        },
+        dataType: 'jsonp'
+      });
+    } catch (e) {
+      // console.log('Oops:',e);
+    }
+  }, Math.random() * (15000 - 5000) + 5000);
 });
